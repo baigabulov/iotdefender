@@ -16,6 +16,6 @@ class DataSetMixin:
             output_feature = self.DEFAULT_OUTPUT_FEATURE
 
         dataset_path = DatasetType.get_dataset_path(dataset_type)
-        self._data = pd.read_csv(dataset_path)
+        self._data = pd.read_csv(dataset_path, sep=';')
         self._output_feature = output_feature
         self._dataset_type = dataset_type
