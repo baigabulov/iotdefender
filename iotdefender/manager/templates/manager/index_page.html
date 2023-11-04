@@ -1,0 +1,57 @@
+{% extends 'manager/base.html' %}
+{% load static %}
+
+{% block title %} IoT Defender {% endblock %}
+
+{% block body %}
+
+    {% include 'manager/loader.html' %}
+
+    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+        <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+        <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+        <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+    </div>
+
+    <div id="wrapper">
+
+        <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+            {% include 'manager/header.html' %}
+
+            <!--Banner Content-->
+            <div id="banner-content" class="row clearfix">
+
+                <div class="col-38">
+
+                    <div class="section-heading">
+                        <h1>KEEP YOUR IOT DEVICES SECURE</h1>
+                        <h2>Use your power like a surgeon's scalpel, with precision and only when needed, to create the most impact and minimize collateral damage.</h2>
+                    </div>
+
+                    <!--Call to Action-->
+                    <a href="{% url 'manager:login_page' %}" class="button">START MANAGING YOUR IOT SECURITY TODAY</a>
+                    <!--End Call to Action-->
+
+                </div>
+
+            </div><!--End of Row-->
+
+        </header>
+
+    </div>
+
+    <!-- Include JavaScript resources -->
+    <script src="{% static 'manager/js/jquery.1.8.3.min.js' %}"></script>
+    <script src="{% static 'manager/js/wow.min.js' %}"></script>
+    <script src="{% static 'manager/js/featherlight.min.js' %}"></script>
+    <script src="{% static 'manager/js/featherlight.gallery.min.js' %}"></script>
+    <script src="{% static 'manager/js/jquery.enllax.min.js' %}"></script>
+    <script src="{% static 'manager/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'manager/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'manager/js/jquery.stickyNavbar.min.js' %}"></script>
+    <script src="{% static 'manager/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'manager/js/images-loaded.min.js' %}"></script>
+    <script src="{% static 'manager/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'manager/js/site.js' %}"></script>
+{% endblock %}
